@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue</title>
+	<!-- <script type="text/javascript" src="js/vue-v1.0.26.js"></script> -->
+	<script type="text/javascript" src="js/vue-v2.5.17.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<ul id="app">
+		<li v-for="(i,index) in users" v-html="index.member" class="user-{{i+1}}">{{i+1}}</li>
+		<input type="text" name="" v-model="msg" lazy v-html="msg">
+	</ul>
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el:"#app",
+			data:{
+				msg:"",
+				users:[
+                    {
+                        RroupName:"烎汆",
+                        member:["张堃","郭清永","林康","庞秀苹","叶飞翔","薛志铭","&nbsp;"]
+                    },
+                    {
+                        RroupName:"魔仙堡",
+                        member:["王昕","严建鹏","潘云","吴双双","丁聪","杨汉卿","陈安"]
+                    },
+                    {
+                        RroupName:"一班之主",
+                        member:["王冬杰","王雪晶","厉琳","刘宇","张嘉豪","贺天明","王豪文"]
+                    },
+                    {
+                        RroupName:"秦时明月",
+                        member:["邢黎","明玥","陈敏","叶丹青","仰超苏","黄荣","周宵宇"]
+                    },
+                    {
+                        RroupName:"小猪佩奇",
+                        member:["罗学成","董芬","许丹梦","洪振峰","卢琪琥","刘海东","魏连伟"]
+                    }
+                ]
+			}
+		})
+	</script>
+</body>
+</html>
